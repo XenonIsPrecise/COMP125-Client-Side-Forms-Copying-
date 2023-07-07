@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    
+</head>
+<body>
+    <div id="heading">
+        <i><u><h1>Mid Term Assignment</h1></i></u>
+        
+    </div>
+    <div id="forms">
+        
+        <form id="form">
+            <h3 style="text-align: center;">Form 1</h3>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" placeholder="Enter Your First Name" required><br>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" placeholder="Enter Your Last Name"><br>
+
+            <label for="address">Address: </label>
+            <input type="text" id="address" required><br>
+
+            <label for="phone_number">Comtact Number: </label>
+            <input type="tel" id="phone_number" placeholder="Enter your Phone Number"><br>
+
+            <label for="email">E-mail: </label>
+            <input type="email" id="email" placeholder="Enter Your E-Mail" required><br>
+
+            <label for="password">Password: </label>
+            <input type="password" id="password" required><br>
+
+            <label for="c_password">Confirm Password: </label>
+            <input type="password" id="c_password" required><br>
+
+            <label for="postal_code">Postal Code: </label>
+            <input type="text" id="postal_code" placeholder="Enter Your Zip/Postal Code" required> <br>
+
+            <label for="state">State: </label>
+            <select id="state" required>
+
+                <option value="ON">ON</option>
+                <option value="BC">BC</option>
+                <option value="NL">NL</option>
+                <option value="PE">PE</option>
+                <option value="NS">NS</option>
+                <option value="NB">NB</option>
+                <option value="QC">QC</option>
+                <option value="AB">AB</option>
+            </select>  
+
+            <button onclick="resetSelect()">Reset</button><br>
+            <script>
+                function resetSelect() {
+                    let states = document.getElementById("state");
+                    states.selectedIndex = -2;
+                }
+            </script>
+            <label for="submit"></label>
+            <input type="submit" id="submit" onclick="validateForm()"><br>
+            <label for="reset"></label>
+            <input type="reset" id="reset"> 
+
+
+
+        </form>
+
+
+        <div id="copy">
+            <input type="checkbox" id="copying" onclick="transferData()">
+            <label for="copying">Copy and paste all the data from Form 1 to Form 2</label><br>
+            
+        <script>
+		    function transferData() 
+            {
+                let firstname = document.getElementById("firstname");
+                let lastname = document.getElementById("lastname")
+                let address = document.getElementById("address")
+                let phone_number =document.getElementById("phone_number")
+                let email = document.getElementById("email")
+                let password = document.getElementById("password")
+                let c_password = document.getElementById("c_password")
+                let postal_code = document.getElementById("postal_code")
+                
+                
+                if (firstname != null) 
+                {
+                    document.getElementById("firstname2").value = firstname.value;
+                }
+
+                if (lastname != null) 
+                {
+                    document.getElementById("lastname2").value = lastname.value;
+                }
+
+                if (address != null) 
+                {
+                    document.getElementById("address2").value = address.value;
+                }
+
+                if (phone_number != null) 
+                {
+                    document.getElementById("phone_number2").value = phone_number.value;
+                }
+
+                if (email != null) 
+                {
+                    document.getElementById("email2").value = email.value;
+                }
+
+                if (password != null) 
+                {
+                    document.getElementById("password2").value = password.value;
+                }
+
+                if (c_password != null) 
+                {
+                    document.getElementById("c_password2").value = c_password.value;
+                }
+
+                if (postal_code != null) 
+                {
+                    document.getElementById("postal_code2").value = postal_code.value;
+                }
+
+                if (lastname != null) 
+                {
+                    document.getElementById("lastname2").value = lastname.value;
+                }
+            
+		    }
+	    </script>
+        </div> 
+        
+        
+        
+        <form id="form2">
+            <h3 style="text-align: center;">Form 2</h3>
+            <label for="firstname2">First Name:</label>
+            <input type="text" id="firstname2"><br>
+
+            <label for="lastname2">Last Name:</label>
+            <input type="text" id="lastname2"><br>
+
+            <label for="address2">Address: </label>
+            <input type="text" id="address2"><br>
+
+            <label for="phone_number2">Comtact Number: </label>
+            <input type="tel" id="phone_number2"><br>
+
+            <label for="email2">E-mail: </label>
+            <input type="email" id="email2"><br>
+
+            <label for="password2">Password: </label>
+            <input type="password" id="password2"><br>
+
+            <label for="c_password2">Confirm Password: </label>
+            <input type="password" id="c_password2"><br>
+
+            <label for="postal_code2">Postal Code: </label>
+            <input type="text" id="postal_code2"> <br>
+
+            <label for="state2">State: </label>
+            <select id="state2">
+                <option value="ON">ON</option>
+                <option value="BC">BC</option>
+                <option value="NL">NL</option>
+                <option value="PE">PE</option>
+                <option value="NS">NS</option>
+                <option value="NB">NB</option>
+                <option value="QC">QC</option>
+                <option value="AB">AB</option>
+                
+            </select>
+            <script>
+                let mySelect2 = document.getElementById("state2");
+                mySelect2.selectedIndex = -1;
+              </script>
+
+        </form>
+    </div>
+</body>
+</html>

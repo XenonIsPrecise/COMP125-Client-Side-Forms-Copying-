@@ -1,0 +1,36 @@
+#heading
+{
+    text-align: center;
+    border: solid;
+    border-radius: 20px;
+    margin: 20px;
+    
+}
+#forms
+{
+    text-align: center;
+    border-color: aqua;
+    border: solid;
+    border-radius: 20px;
+}
+
+#form, #form2
+{
+    text-align: left;
+    border: solid;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px;
+    border-width: 5px;
+}
+
+input:valid {
+    color: green;
+    background-color: white;
+    
+}
+
+input:invalid {
+    color: red;
+    background-color: rgb(253, 192, 192);
+}
